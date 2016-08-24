@@ -23,7 +23,7 @@ $(document).ready(function() {
 		usersConnected.text(Object.keys(users).length);
 
 		var userList = '';
-		for (user in users) {
+		for (var user in users) {
 			userList += '<li>' + users[user] + '</li>';
 			console.log(users[user]);
 		}
@@ -36,7 +36,7 @@ $(document).ready(function() {
 		setTimeout(function() {
 			userTyping.text('');
 		}, 1000);
-	}
+	};
 
 	input.on('keydown', function(event) {
 		if (event.keyCode != 13) {
